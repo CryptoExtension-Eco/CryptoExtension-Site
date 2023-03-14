@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle, faFacebook, faGithub, faMailchimp, faInstagram } from '@fortawesome/free-brands-svg-icons'
@@ -8,16 +8,21 @@ import './App.css'
 const Home = () => {
     
     const [modal, setModal] = useState(false);
+    const [secondModal, setSecondModal] = useState(false);
+    const [troisModal, setTroisModal] = useState(false);
+
 
     const toggleModal = () => {
       setModal(!modal);
     };
   
-    if(modal) {
-      document.body.classList.add('active-modal')
-    } else {
-      document.body.classList.remove('active-modal')
-    }
+    useEffect(() => {
+        if (modal || secondModal || troisModal) {
+          document.body.classList.add('active-modal');
+        } else {
+          document.body.classList.remove('active-modal');
+        }
+      }, [modal, secondModal, troisModal]);
 
     return (
         <>
@@ -37,18 +42,55 @@ const Home = () => {
             </div>
 
             {modal && (
-            <div className="modal">
+            <div className="modal" id="modal">
             <div onClick={toggleModal} className="overlay"></div>
                 <div className="modal-content">
                     <h2 className="text-modal">Connectez-vous</h2>
                     <li className="social"><a href="#a"><FontAwesomeIcon icon={faGoogle} className="i" /> Se Connecter avec Google</a></li>
                     <li className="social"><a href="#a"><FontAwesomeIcon icon={faFacebook} className="i"/> Se Connecter avec Facebook</a></li>
                     <li className="social"><a href="#a" id="githubButton"><FontAwesomeIcon icon={faGithub}  /> Se Connecter avec Github</a></li>        
-                    <li className="socials"> <a href="#test"><FontAwesomeIcon icon={faMailchimp} className="i"/> Se Connecter avec votre E-Mail</a></li>
-                    <p className="createA">vous n'avez pas de compte, <a href="#test">créez-en un</a> maintenant</p>
+                    <li className="socials"> <a href="#test" onClick={() => setSecondModal(true)}><FontAwesomeIcon icon={faMailchimp} className="i"/> Se Connecter avec votre E-Mail</a></li>
+                    <p className="createA">vous n'avez pas de compte, <a href="#test" >créez-en un</a> maintenant</p>
                     <button className="close-modal" onClick={toggleModal}>&times;</button>
                 </div>
             </div>
+            )}
+            {secondModal && (
+                <div className="modal" id="test-modal">
+                    <div onClick={() => setSecondModal(false)} className="overlay"></div>
+                        <div className="modal-content">
+                        <h1>Se connecter avec votre adresse e-mail</h1>
+                            <form action="">
+                                <label htmlFor="email">E-mail</label>
+                                <input type="email" name="email" placeholder="Entrez votre adresse e-mail" required/>
+                                <label htmlFor="password">Mot de passe</label>
+                                <input type="password" name="password" placeholder="Votre mot de passe" required/>
+                                <button type="submit">Se connecter</button>
+                                <p className="createA">Vous n'avez pas de compte ? <a href="#a" onClick={() => setTroisModal(true)}>Créez-en un</a> maintenant.</p>
+                                <p className="createA"><a href="#a">Mot de passe oublié</a> ?</p>
+                            </form>
+                         <button className="close-modal" onClick={() => setSecondModal(false)}>&times;</button>
+                    </div>
+                </div>
+            )}
+            {troisModal && (
+                <div className="modal" id="trois-modal">
+                    <div onClick={() => setTroisModal(false)} className="overlay"></div>
+                    <div className="modal-content">
+                    <h1>Créer un compte</h1>
+                    <form action="">
+                        <label htmlFor="name">Nom complet</label>
+                        <input type="text" name="name" placeholder="Entrez votre nom complet" required/>
+                        <label htmlFor="email">E-mail</label>
+                        <input type="email" name="email" placeholder="Entrez votre adresse e-mail" required/>
+                        <label htmlFor="password">Mot de passe</label>
+                        <input type="password" name="password" placeholder="Entrez votre mot de passe" required/>
+                        <button type="submit">Créer un compte</button>
+                        <p className="createA">Déjà un compte ? <a href="#a">Connectez-vous</a>.</p>
+                    </form>
+                    <button className="close-modal" onClick={() => setTroisModal(false)}>&times;</button>
+                    </div>
+                </div>
             )}
 
             <div className="footer">
