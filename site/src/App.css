@@ -24,6 +24,10 @@ body{
   transition: 0.5s;
 }
 
+body.active-modal {
+  overflow-y: hidden;
+}
+
 /*==== HEADER ====*/
 header {
   top: 0;
@@ -98,6 +102,105 @@ header .navigation li .Link:hover {
     font-weight: 200;
     text-align: center;
 }
+
+.btn-modal {
+  padding: 10px 20px;
+  display: block;
+  margin: 100px auto 0;
+  font-size: 18px;
+}
+
+.modal, .overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.overlay {
+  background: rgba(49,49,49,0.8);
+}
+
+.text-modal{
+  text-align: center;
+  color: var(--second-color);
+}
+
+.modal-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: var(--text-color);
+  padding: 14px 28px;
+  border-radius: 19px;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 35px;
+  padding: 5px 7px;
+  color: var(--second-color);
+  background-color: var(--text-color);
+  border: none;
+  border-radius: 9px;
+}
+
+.social{
+  margin: 5px;
+  padding: 20px;
+  background-color: #eee;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  list-style: none;
+  transition: 0.3s;
+}
+
+.socials{
+  margin: 5px;
+  padding: 20px;
+  background-color: #eee;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  list-style: none;
+  transition: 0.3s;
+}
+
+.social a{
+  position: relative;
+  left: 15px;
+  text-decoration: none;
+  color: #252830;
+}
+
+.socials a{
+  text-decoration: none;
+  color: #252830;
+}
+
+.social i{
+
+  font-size: 25px;
+  margin: 0 15px;
+}
+
+.social:hover{
+  background-color: var(--first-color);
+  color: var(--second-color);
+  transition: 0.3s;
+}
+
+/* FOOTER */
 
 .footer{
   position: relative;

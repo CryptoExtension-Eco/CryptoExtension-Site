@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faGoogle, faFacebook, faGithub, faMailchimp, faInstagram } from '@fortawesome/free-brands-svg-icons'
+
 import './App.css'
 
 const Home = () => {
+    
+    const [modal, setModal] = useState(false);
+
+    const toggleModal = () => {
+      setModal(!modal);
+    };
+  
+    if(modal) {
+      document.body.classList.add('active-modal')
+    } else {
+      document.body.classList.remove('active-modal')
+    }
+
     return (
         <>
             <header>
@@ -15,6 +27,7 @@ const Home = () => {
                     <li><Link className="Link" to="/">Home</Link></li>
                     <li><Link className="Link" to="/dashboard">Dashboard</Link></li>
                     <li><Link className="Link" to="/download">Download</Link></li>
+                    <li><a href="#a" className="Link" onClick={toggleModal}>Connexion</a></li>
                 </ul>
             </header>
 
@@ -23,6 +36,19 @@ const Home = () => {
                 <p className="paragraphe">C'est une extension Chrome, qui permet de voir le prix d'échange de deux paires de cryptomonnaies, l'extension est divisée en deux parties, l'extension en elle-même, et le site, qui permet de se connecter à son compte Metamask, et de pouvoir faire des virements directement depuis le site, tout passe par Metamask, et tout est instantané</p>
             </div>
 
+            {modal && (
+            <div className="modal">
+            <div onClick={toggleModal} className="overlay"></div>
+                <div className="modal-content">
+                    <h2 className="text-modal">Connectez-vous</h2>
+                    <li className="social"><a href="#a"><FontAwesomeIcon icon={faGoogle} className="i" /> Se Connecter avec Google</a></li>
+                    <li className="social"><a href="#a"><FontAwesomeIcon icon={faFacebook} className="i"/> Se Connecter avec Facebook</a></li>
+                    <li className="social"><a href="#a" id="githubButton"><FontAwesomeIcon icon={faGithub}  /> Se Connecter avec Github</a></li>        
+                    <li className="socials"> <a href="#test"><FontAwesomeIcon icon={faMailchimp} className="i"/> Se Connecter avec votre E-Mail</a></li>
+                    <button className="close-modal" onClick={toggleModal}>&times;</button>
+                </div>
+            </div>
+            )}
 
             <div className="footer">
                 <p className='footer_text'>Copyright © 2023 Julien-Milants   |</p>
