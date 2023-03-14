@@ -45,6 +45,7 @@ const Home = () => {
                     <li className="social"><a href="#a"><FontAwesomeIcon icon={faFacebook} className="i"/> Se Connecter avec Facebook</a></li>
                     <li className="social"><a href="#a" id="githubButton"><FontAwesomeIcon icon={faGithub}  /> Se Connecter avec Github</a></li>        
                     <li className="socials"> <a href="#test"><FontAwesomeIcon icon={faMailchimp} className="i"/> Se Connecter avec votre E-Mail</a></li>
+                    <p className="createA">vous n'avez pas de compte, <a href="#test">créez-en un</a> maintenant</p>
                     <button className="close-modal" onClick={toggleModal}>&times;</button>
                 </div>
             </div>
