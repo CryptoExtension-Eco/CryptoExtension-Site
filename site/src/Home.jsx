@@ -86,7 +86,7 @@ const Home = () => {
                         <label htmlFor="password">Mot de passe</label>
                         <input type="password" name="password" placeholder="Entrez votre mot de passe" required/>
                         <button type="submit">Créer un compte</button>
-                        <p className="createA">Déjà un compte ? <a href="#a">Connectez-vous</a>.</p>
+                        <p className="createA">Déjà un compte ? <a href="#a ">Connectez-vous</a>.</p>
                     </form>
                     <button className="close-modal" onClick={() => setTroisModal(false)}>&times;</button>
                     </div>

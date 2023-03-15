@@ -55,30 +55,28 @@ const Dashboard = () => {
                     <li><Link className="Link" to="/">Home</Link></li>
                     <li><Link className="Link" to="/dashboard">Dashboard</Link></li>
                     <li><Link className="Link" to="/download">Download</Link></li>
+                    <li className="Link"><a href="#a" id="loginButton" className="Link">{loginButtonText}</a></li>
                 </ul>
             </header>   
-
-            <div className="wallet" id="Wallet">
-            <h1 className="wallet-title">Wallet</h1>
-
-            <button id="loginButton" className="button-connection">{loginButtonText}</button>
-            <p id="userWallet" className="text-lg text-gray-600 my-2 ethAdresse"></p>
         
-            <div class="card-container">
-                <div class="card1">
-                    <img class="chip" src={chip}alt=""/>
-                    <img class="contactless" src={contactless} alt=""/>
-                    <img class="visa" src={visa} alt="" />
-                    <p id="test" class="card-number">{userWalletAddress}</p>
-                    <div class="arrow">
+                <div className="contenu">
+                    <div className="wallet" id="Wallet">
+                        <p id="userWallet" className="text-lg text-gray-600 my-2 ethAdresse"></p>
+                        <div className="card-container">
+                            <div className="card1">
+                                <img className="chip" src={chip}alt=""/>
+                                <img className="contactless" src={contactless} alt=""/>
+                                <img className="visa" src={visa} alt="" />
+                                <p id="test" className="card-number">{userWalletAddress}</p>
+                                <div className="arrow">
+                                </div>
+                                <p className="card-name">Ethereum</p>
+                                <p className="bank-name">CryptoBank</p>
+                            </div>
+                        </div>
+                        <p className="card-text">le bouton ci-dessous, permet de vous connecter à votre wallet metamask, il y aura bientôt la possibilité de choisir n'importe quel wallet</p>
                     </div>
-                    <p class="card-name">Ethereum</p>
-                    <p class="bank-name">CryptoBank</p>
                 </div>
-            </div>
-
-            <p className="card-text">le bouton ci-dessous, permet de vous connecter à votre wallet metamask, il y aura bientôt la possibilité de choisir n'importe quel wallet</p>
-        </div>
 
             <div className="footer">
                 <p className='footer_text'>Copyright © 2023 Julien-Milants   |</p>
