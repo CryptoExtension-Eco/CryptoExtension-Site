@@ -5,8 +5,10 @@ import Dashboard from "./Pages/Dashboard";
 import Download from "./Pages/Download";
 import './App.css';
 
+
 const App = () => {
   return(
+  <>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}/>
@@ -14,6 +16,7 @@ const App = () => {
         <Route path="download" element={<Download />}/>
       </Routes>
     </BrowserRouter>
+  </>
   )
 }
 
