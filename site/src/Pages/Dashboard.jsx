@@ -16,13 +16,10 @@ const Dashboard = () => {
 
     useEffect(() => {
         toggleButton();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const toggleButton = () => {
-        if(!window.ethereum){
-            setLoginButtonText("Votre wallet n'est pas installé");
-            return false;
-        }
         document.getElementById("loginButton").addEventListener("click", loginWithMetaMask);
     };
 
@@ -80,8 +77,7 @@ const Dashboard = () => {
                 </div>
             </div>
 
-            <p className="card-text">
-            the button below, allows ed you connect to your allet metamask, there will soon be the possibility to choose any wallet        </p>
+            <p className="card-text">le bouton ci-dessous, permet de vous connecter à votre wallet metamask, il y aura bientôt la possibilité de choisir n'importe quel wallet</p>
         </div>
 
             <div className="footer">
