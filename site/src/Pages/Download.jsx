@@ -9,7 +9,7 @@ import '../App.css'
 const Download = () => {
     return(
         <>
-         <header>
+            <header>
                 <a href="#home" className="logo">CryptoExtension</a>
                 <ul className="navigation">
                     <li><Link className="Link" to="/">Home</Link></li>
@@ -18,6 +18,10 @@ const Download = () => {
                 </ul>
             </header>   
 
+            <div className="content">
+                <h2 className="title">Hello</h2>
+                <p className="paragraphe">World, test, je sais pas si ça marche, sah</p>
+            </div>
 
             <div className="footer">
                 <p className='footer_text'>Copyright © 2023 Julien-Milants   |</p>
