@@ -19,8 +19,9 @@ const Download = () => {
             </header>   
 
             <div className="content">
-                <h2 className="title">Hello</h2>
-                <p className="paragraphe">World, test, je sais pas si ça marche, sah</p>
+                <h2 className="title">Télécharger l'extension</h2>
+                <p className="paragraphe">Pour télécharger l'extension, vous avez 2 choix, sois en passant par le boutton ci-dessous, sois en allant sur le chrome store</p>
+                <a href="https://chrome.google.com/webstore/detail/cryptoextension/jbmpclggkoleafimiibabhiikdfidihf/related" target="_blank" rel="noreferrer" className="button">Télécharger</a>
             </div>
 
             <div className="footer">
