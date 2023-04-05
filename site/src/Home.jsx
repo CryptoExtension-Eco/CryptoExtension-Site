@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import FacebookAuthButton from "./auth/facebook/FacebookAuthButton";
 import GithubAuthButton from "./auth/github/GithubAuthButton";
 import GitLabAuthButton from "./auth/gitlab/GitLabAuthButton";
-import { faGoogle, faFacebook, faGithub, faMailchimp, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faGoogle, faGitlab, faFacebook, faGithub, faMailchimp, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 import './App.css'
 
@@ -49,7 +49,7 @@ const Home = () => {
             <div onClick={toggleModal} className="overlay"></div>
                 <div className="modal-content">
                     <h2 className="text-modal">Connectez-vous</h2>
-                    <li className="social"><a href="#a"><FontAwesomeIcon icon={faGoogle} className="i" /><GitLabAuthButton/></a></li>
+                    <li className="social"><a href="#a"><FontAwesomeIcon icon={faGitlab} className="i" /><GitLabAuthButton/></a></li>
                     <li className="social"><a href="#a"><FontAwesomeIcon icon={faFacebook} className="i"/> <FacebookAuthButton/></a></li>
                     <li className="social"><a href="#a" id="githubButton"><FontAwesomeIcon icon={faGithub}  /> <GithubAuthButton/></a></li>        
                     <li className="socials"> <a href="#test" onClick={() => setSecondModal(true)}><FontAwesomeIcon icon={faMailchimp} className="i"/> Se Connecter avec votre E-Mail</a></li>
