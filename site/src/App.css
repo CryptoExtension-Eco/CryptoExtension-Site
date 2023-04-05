@@ -79,6 +79,8 @@ header .navigation li .Link:hover {
   color: var(--first-color);
 }
 
+
+
 /* TEXT & TITLE */
 .content{
   display: flex;
@@ -186,7 +188,6 @@ header .navigation li .Link:hover {
   text-decoration: none;
   color: #252830;
 }
-
 .social a .i,
 .socials a .i{
   font-size: 20px;
