@@ -20,7 +20,7 @@ const Download = () => {
 
             <div className="content">
                 <h2 className="title">Hello</h2>
-                <p className="paragraphe">World, test, je sais pas si ça marche, sah</p>
+                <p className="para">World, je fait mon teste, nan mais tqt pas mdr, je sais pas</p>
             </div>
 
             <div className="footer">
