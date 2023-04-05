@@ -436,6 +436,23 @@ header .navigation li .Link:hover {
   text-align: center;
 }
 
+.button{
+  position: relative;
+  top: -100px;
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 25px 30px;
+  font-size: 25px;
+  background-color: var(--first-color);
+  border-radius: 19px;
+  transition: 0.5s;
+}
+
+.button:hover{
+  color: var(--second-color);
+  background-color: var(--text-color);
+}
+
 /* FOOTER */
 .footer{
   position: relative;
