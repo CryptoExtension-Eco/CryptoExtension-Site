@@ -3,6 +3,7 @@ image: ubuntu:latest
 branches:
     test:
         - master
+        - main
 
 matrix:
     - 
