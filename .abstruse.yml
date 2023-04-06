@@ -1,0 +1,28 @@
+image: ubuntu:latest
+
+branches:
+    test:
+        - master
+
+matrix:
+    - 
+        env: NODE_VERSION=18 SCRIPT=build
+        image: ubuntu:latest
+
+cache:
+    - node_modules
+    - build
+
+before_install:
+    - apt update && apt install -y wget
+    - wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+    - nvm install $NODE_VERSION
+
+install:
+    - npm install
+
+script:
+    - npm run $SCRIPT
+
+before_deploy:
+    - echo "Waiting for GO Live"
