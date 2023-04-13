@@ -190,7 +190,16 @@ header .navigation li .Link:hover {
 }
 .social a .i,
 .socials a .i{
-  font-size: 20px;
+  position: relative;
+  top: 2px;
+  left: -5px;
+  font-size: 25px;
+  transition: 0.3s;
+}
+
+.social a .i:hover,
+.socials a .i:hover{
+  color: rgba(49, 151, 151, 0.823);
 }
 
 .createA{

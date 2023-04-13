@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import FacebookAuthButton from "./auth/facebook/FacebookAuthButton";
-import GithubAuthButton from "./auth/github/GithubAuthButton";
-import GitLabAuthButton from "./auth/gitlab/GitLabAuthButton";
 import { faGoogle, faGitlab, faFacebook, faGithub, faMailchimp, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 import './App.css'
@@ -49,9 +46,9 @@ const Home = () => {
             <div onClick={toggleModal} className="overlay"></div>
                 <div className="modal-content">
                     <h2 className="text-modal">Connectez-vous</h2>
-                    <li className="social"><a href="#a"><FontAwesomeIcon icon={faGitlab} className="i" /><GitLabAuthButton/></a></li>
-                    <li className="social"><a href="#a"><FontAwesomeIcon icon={faFacebook} className="i"/> <FacebookAuthButton/></a></li>
-                    <li className="social"><a href="#a" id="githubButton"><FontAwesomeIcon icon={faGithub}  /> <GithubAuthButton/></a></li>        
+                    <li className="social"><a href="#a"><FontAwesomeIcon icon={faGitlab} className="i" />Se Connecter avec Gitlab</a></li>
+                    <li className="social"><a href="#a"><FontAwesomeIcon icon={faFacebook} className="i"/>Se Connecter avec Facebook</a></li>
+                    <li className="social"><a href="#a"><FontAwesomeIcon icon={faGithub} className="i"/> Se Connecter avec Github</a></li>        
                     <li className="socials"> <a href="#test" onClick={() => setSecondModal(true)}><FontAwesomeIcon icon={faMailchimp} className="i"/> Se Connecter avec votre E-Mail</a></li>
                     <p className="createA">vous n'avez pas de compte, <a href="#test" >créez-en un</a> maintenant</p>
                     <button className="close-modal" onClick={toggleModal}>&times;</button>
