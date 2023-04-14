@@ -29,10 +29,10 @@ const Home = () => {
             <header>
                 <a href="#home" className="logo">CryptoExtension</a>
                 <ul className="navigation">
-                    <li><Link className="Link" to="/">Home</Link></li>
                     <li><Link className="Link" to="/dashboard">Dashboard</Link></li>
                     <li><Link className="Link" to="/download">Download</Link></li>
-                    <li><a href="#a" className="Link" onClick={toggleModal}>Connexion</a></li>
+                    <li><Link className="Link" to="/news">News</Link></li>
+                    {/* <li><a href="#a" className="Link" onClick={toggleModal}>Connexion</a></li> */}
                 </ul>
             </header>
 
