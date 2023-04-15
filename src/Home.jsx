@@ -32,7 +32,7 @@ const Home = () => {
                     <li><Link className="Link" to="/dashboard">Dashboard</Link></li>
                     <li><Link className="Link" to="/download">Download</Link></li>
                     <li><Link className="Link" to="/news">News</Link></li>
-                    {/* <li><a href="#a" className="Link" onClick={toggleModal}>Connexion</a></li> */}
+                    <li><a href="#a" className="Link" onClick={toggleModal}>Connexion</a></li>
                 </ul>
             </header>
 
