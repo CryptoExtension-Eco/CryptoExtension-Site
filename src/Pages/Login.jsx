@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faGoogle, faGithub } from '@fortawesome/free-brands-svg-icons';
+
 import '../App.css';
 
 const Login = () => {
@@ -44,24 +47,29 @@ const Login = () => {
 
       <div className="form-container">
         <h2 className='h2'>{isRegistering ? 'Register' : 'Login'}</h2>
+        <div className="social-icons">
+          <FontAwesomeIcon icon={faFacebookF} className="icon"/>
+          <FontAwesomeIcon icon={faGoogle} className="icon"/>
+          <FontAwesomeIcon icon={faGithub} className="icon"/>
+        </div>
         <form onSubmit={isRegistering ? handleRegisterSubmit : handleLoginSubmit}>
           {isRegistering && (
             <div className="form-group">
-              <label htmlFor="name">Name</label>
+              <label htmlFor="name">Name:</label>
               <input type="text" name="name" onChange={handleRegisterInputChange} value={registerData.name} placeholder='Name...' required/>
             </div>
           )}
           <div className="form-group">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">Email:</label>
             <input type="email" name="email" onChange={isRegistering ? handleRegisterInputChange : handleLoginInputChange} value={isRegistering ? registerData.email : loginData.email} placeholder='Email...' required/>
           </div>
           <div className="form-group">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">Password:</label>
             <input type="password" name="password" onChange={isRegistering ? handleRegisterInputChange : handleLoginInputChange} value={isRegistering ? registerData.password : loginData.password} placeholder='PassWord...' required/>
           </div>
-          <button type="submit">{isRegistering ? 'Register' : 'Login'}</button>
+          <button className='logre' type="submit">{isRegistering ? 'Register' : 'Login'}</button>
         </form>
-        <button onClick={handleToggleRegister}>
+        <button onClick={handleToggleRegister} className='btn-form'>
           {isRegistering ? 'Already have an account? Login' : "Don't have an account? Register"}
         </button>
       </div>
