@@ -523,7 +523,7 @@ input[type="password"] {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
-  border-color: #000;
+  border-color: #ffa200;
   outline: none;
 }
 
@@ -569,7 +569,7 @@ input[type="password"]:focus {
   color: var(--second-color);
   margin: 0 10px;
   border-radius: 10%;
-  background-color: #eae8e8;
+  background-color: #f1f1f1;
   padding: 10px;
   transition: background-color 0.2s ease-in-out;
 }
