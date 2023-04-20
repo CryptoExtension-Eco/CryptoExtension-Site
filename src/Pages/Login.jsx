@@ -34,6 +34,16 @@ const Login = () => {
     setIsRegistering(!isRegistering);
   };
 
+  const handleFacebookButton = () => {
+    alert("Fcabeook")
+  }
+  const handleGoogleButton = () => {
+    alert("Google")
+  }
+  const handleGithubButton = () => {
+    alert("GitHub")
+  }
+
   return (
     <>
       <header>
@@ -48,9 +58,9 @@ const Login = () => {
       <div className="form-container">
         <h2 className='h2'>{isRegistering ? 'Register' : 'Login'}</h2>
         <div className="social-icons">
-          <FontAwesomeIcon icon={faFacebookF} className="icon"/>
-          <FontAwesomeIcon icon={faGoogle} className="icon"/>
-          <FontAwesomeIcon icon={faGithub} className="icon"/>
+          <FontAwesomeIcon icon={faFacebookF} className="icon" onClick={handleFacebookButton}/>
+          <FontAwesomeIcon icon={faGoogle} className="icon" onClick={handleGoogleButton}/>
+          <FontAwesomeIcon icon={faGithub} className="icon" onClick={handleGithubButton}/>
         </div>
         <form onSubmit={isRegistering ? handleRegisterSubmit : handleLoginSubmit}>
           {isRegistering && (
