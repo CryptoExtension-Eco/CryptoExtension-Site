@@ -14,7 +14,7 @@ const Home = () => {
                 <ul className="navigation">
                     <li><Link className="Link" to="/dashboard">Dashboard</Link></li>
                     <li><Link className="Link" to="/download">Download</Link></li>
-                    <li><Link className="Link" to="/login">Login</Link></li>
+                    {/* <li><Link className="Link" to="/login">Login</Link></li> */}
                     <li><Link className="Link" to="/news">News</Link></li>
                 </ul>
             </header>

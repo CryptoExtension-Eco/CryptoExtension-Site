@@ -55,7 +55,7 @@ const Dashboard = () => {
                     <li><Link className="Link" to="/">Home</Link></li>
                     <li><Link className="Link" to="/dashboard">Dashboard</Link></li>
                     <li><Link className="Link" to="/download">Download</Link></li>
-                    <li><Link className="Link" to="/login">Login</Link></li>
+                    {/* <li><Link className="Link" to="/login">Login</Link></li> */}
                     <li className="Link"><a href="#a" id="loginButton" className="Link">{loginButtonText}</a></li>
                 </ul>
             </header>   
@@ -80,24 +80,7 @@ const Dashboard = () => {
                 </div>
 
 
-                {/* Ajouter  une fonciton pour voir le solde actuel du compte metamask
-                    ainsi que les denrieres transactions effectuées 
-                    
-                    Permettre à l'utilisateur d'acheter ou de vendre des crypto-monnaies 
-                    directement depuis votre application en utilisant leur compte Metamask.
-
-                    Ajouter des fonctionnalités de portefeuille crypto pour permettre à l'utilisateur
-                     de suivre ses investissements et de surveiller ses gains et pertes.
-
-                    Intégrer des outils de recherche de marché pour aider 
-                    l'utilisateur à trouver de nouvelles opportunités d'investissement.
-
-                    Proposer des actualités sur les crypto-monnaies 
-                    et les derniers développements de l'industrie.
-
-                    Offrir une fonctionnalité de chat en direct pour permettre aux utilisateurs 
-                    de discuter entre eux et de poser des questions à l'équipe de support.
-                */}
+  
 
             <div className="footers">
                 <p className='footer_text'>Copyright © 2023 Julien-Milants   |</p>
