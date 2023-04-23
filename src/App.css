@@ -583,21 +583,10 @@ input[type="password"]:focus {
 
 /* FOOTER */
 .footer{
-  position: relative;
+  position: absolute;
   margin-top: 1rem;
   padding: 1rem;
-  bottom: -200px;
-  left: -50px;
-  width: 100%;
-  height: -10px;
-  text-align: center;
-}
-
-.footers{
-  position: relative;
-  margin-top: 1rem;
-  padding: 1rem;
-  bottom: -480px;
+  bottom: 0;
   left: -50px;
   width: 100%;
   height: -10px;

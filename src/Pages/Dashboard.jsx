@@ -82,7 +82,7 @@ const Dashboard = () => {
 
   
 
-            <div className="footers">
+            <div className="footer">
                 <p className='footer_text'>Copyright © 2023 Julien-Milants   |</p>
                 <a href='https://github.com/NapoTwiixe306' target="_blank" rel='noopener noreferrer' className='lofo'><FontAwesomeIcon icon={faGithub} size="2x" className='github'/></a>
                 <a href='https://CryptoExtension.fr' target="_blank" rel='noopener noreferrer' className='lofo'><FontAwesomeIcon icon={faGoogle} size="2x" className='github'/></a>
