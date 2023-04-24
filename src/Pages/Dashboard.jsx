@@ -60,27 +60,24 @@ const Dashboard = () => {
                 </ul>
             </header>   
         
-                <div className="contenu">
-                    <div className="wallet" id="Wallet">
-                        <p id="userWallet" className="text-lg text-gray-600 my-2 ethAdresse"></p>
-                        <div className="card-container">
-                            <div className="card1">
-                                <img className="chip" src={chip}alt=""/>
-                                <img className="contactless" src={contactless} alt=""/>
-                                <img className="visa" src={visa} alt="" />
-                                <p id="test" className="card-number">{userWalletAddress}</p>
-                                <div className="arrow">
-                                </div>
-                                <p className="card-name">Ethereum</p>
-                                <p className="bank-name">CryptoBank</p>
+            <div className="contenu">
+                <div className="wallet" id="Wallet">
+                    <p id="userWallet" className="text-lg text-gray-600 my-2 ethAdresse"></p>
+                    <div className="card-container">
+                        <div className="card1">
+                            <img className="chip" src={chip}alt=""/>
+                            <img className="contactless" src={contactless} alt=""/>
+                            <img className="visa" src={visa} alt="" />
+                            <p id="test" className="card-number">{userWalletAddress}</p>
+                            <div className="arrow">
                             </div>
+                            <p className="card-name">Ethereum</p>
+                            <p className="bank-name">CryptoBank</p>
                         </div>
-                        <p className="card-text">le bouton ci-dessous, permet de vous connecter à votre wallet metamask, il y aura bientôt la possibilité de choisir n'importe quel wallet</p>
                     </div>
+                    <p className="card-text">le bouton ci-dessous, permet de vous connecter à votre wallet metamask, il y aura bientôt la possibilité de choisir n'importe quel wallet</p>
                 </div>
-
-
-  
+            </div>
 
             <div className="footers">
                 <p className='footer_text'>Copyright © 2023 Julien-Milants   |</p>
