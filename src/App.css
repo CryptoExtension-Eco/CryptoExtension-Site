@@ -579,6 +579,45 @@ input[type="password"]:focus {
   color: #fff;
 }
 
+/* .box_coockies {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color: red; 
+  padding: 10px;
+  text-align: center;
+  color: white;
+  border-radius: 19px;
+}
+
+.box_coockies h1 {
+  margin-top: 0;
+  font-size: 45px;
+}
+
+.box_coockies p {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.box_coockies button{
+  padding: 15px 30px;
+  border: none;
+  border-radius: 19px;
+  background-color: var(--first-color);
+  font-size: 25px;
+  transition: 0.3s;
+}
+
+.box_coockies button:hover{
+  background-color: var(--text-color);
+}
+
+.box_coockies a{
+  color: var(--first-color);
+  margin-left: 15px;
+} */
 
 
 /* FOOTER */

@@ -19,7 +19,7 @@ const App = () => {
         <Route path="download" element={<Download />}/>
         <Route path="login" element={<Login />}/>
         <Route path="news" element={<News/>}/>
-        <Route path="notfound" element={<NotFound/>}/>
+        <Route path="notfound" element={<NotFound/>}/>       
       </Routes>
     </BrowserRouter>
   </>
