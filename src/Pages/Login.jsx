@@ -35,7 +35,7 @@ const Login = () => {
   };
 
   const handleFacebookButton = () => {
-    alert("Fcabeook")
+    alert("FaceBook")
   }
   const handleGoogleButton = () => {
     alert("Google")
