@@ -35,13 +35,13 @@ const Login = () => {
   };
 
   const handleFacebookButton = () => {
-    alert("FaceBook")
+    alert("FaceBook");
   }
   const handleGoogleButton = () => {
-    alert("Google")
+    alert("Google");
   }
   const handleGithubButton = () => {
-    alert("GitHub")
+    alert("GitHub");
   }
 
   return (
