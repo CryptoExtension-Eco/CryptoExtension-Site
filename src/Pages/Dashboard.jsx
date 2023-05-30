@@ -8,6 +8,7 @@ import chip from '../img/chip.png';
 import contactless from '../img/wifi-signal.png'
 import visa from '../img/visa.png'
 import '../App.css'
+import Chat from "./Chat";
 
 const Dashboard = () => {
 
@@ -78,6 +79,7 @@ const Dashboard = () => {
                     <p className="card-text">le bouton ci-dessous, permet de vous connecter à votre wallet metamask, il y aura bientôt la possibilité de choisir n'importe quel wallet</p>
                 </div>
             </div>
+            <Chat/>
 
             <div className="footer">
                 <p className='footer_text'>Copyright © 2023 Julien-Milants   |</p>
