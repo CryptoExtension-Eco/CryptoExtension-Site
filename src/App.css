@@ -295,6 +295,81 @@ header .navigation li .Link:hover {
   background-color: rgba(0,0,0,0.4);
 }
 
+/*Chat Icon*/
+.chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.span {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid white;
+}
+
+.dialog {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 400px;
+  height: 500px;
+  background-color: var(--second-color);
+  padding: 5px;
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.dialog-content h1 {
+  position: relative;
+  left: -50px;
+  top: 5px;
+  color: white;
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.dialog-content .btn {
+  position: relative;
+  top: -125px;
+  left: 160px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background: none;
+  font-size: 50px;
+}
+
+.dialog-content input[type="text"]{
+  width: 340px;
+  margin-left: -10px;
+  margin-top: 190px;
+}
+
+
+.send-icon {
+  position: relative;
+  color: blue;
+  font-size: 38px;
+  top: 8px;
+  left: 5px;
+  /* background-color: red; */
+} 
+
 /* CARD */
 .wallet{
   position: relative;

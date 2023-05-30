@@ -1,12 +1,38 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 import './App.css'
 
+const avtar = require ('./img/avatar.png')
+
 const Home = () => {
-   
+    const [dialogOpen, setDialogOpen] = useState(false);
+    const [textInput, setTextInput] = useState('');
+  
+    const handleChatClick = () => {
+      setDialogOpen(true);
+    };
+  
+    const handleCloseDialog = () => {
+      setDialogOpen(false);
+    };
+  
+    const handleInputChange = (event) => {
+      setTextInput(event.target.value);
+    };
+  
+    const handleSendMessage = () => {
+      console.log('Message envoyé :', textInput);
+      setTextInput('');
+    };
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter') {
+          handleSendMessage();
+        }
+      };
     return (
         <>
             <header>
@@ -23,6 +49,32 @@ const Home = () => {
             <div className="content">
                 <h2 className="title">CryptoExtension</h2>
                 <p className="paragraphe">C'est une extension Chrome, qui permet de voir le prix d'échange de deux paires de cryptomonnaies, l'extension est divisée en deux parties, l'extension en elle-même, et le site, qui permet de se connecter à son compte Metamask, et de pouvoir faire des virements directement depuis le site, tout passe par Metamask, et tout est instantané</p>
+            </div>
+
+            <div>
+                <div className="chat" id="chat" onClick={handleChatClick}>
+                    <img src={avtar} alt="" className="span"/>
+                </div>
+                {dialogOpen && (
+                    <div className="dialog">
+                        <div className="dialog-content">
+                            <h1>CryptoExtension ChatBot</h1>
+                            <button className="btn" onClick={handleCloseDialog}>&times;</button>
+                            <div className="input-container">
+                                <input
+                                    type="text"
+                                    placeholder="Écrire du texte..."
+                                    value={textInput}
+                                    onChange={handleInputChange}
+                                    onKeyDown={handleKeyPress}
+                                />
+                                <i className="send-button" onClick={handleSendMessage}>
+                                    <FontAwesomeIcon icon={faPaperPlane} className="send-icon" />
+                                </i>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
 
             <div className="footer">
