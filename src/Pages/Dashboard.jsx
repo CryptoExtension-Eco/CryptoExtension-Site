@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import chip from '../img/chip.png';
 import contactless from '../img/wifi-signal.png'
 import visa from '../img/visa.png'
 import '../App.css'
-import Chat from "./Chat";
+import {Chat, Footer} from './Widget'
 
 const Dashboard = () => {
 
@@ -81,12 +77,7 @@ const Dashboard = () => {
             </div>
             <Chat/>
 
-            <div className="footer">
-                <p className='footer_text'>Copyright © 2023 Julien-Milants   |</p>
-                <a href='https://github.com/NapoTwiixe306' target="_blank" rel='noopener noreferrer' className='lofo'><FontAwesomeIcon icon={faGithub} size="2x" className='github'/></a>
-                <a href='https://CryptoExtension.fr' target="_blank" rel='noopener noreferrer' className='lofo'><FontAwesomeIcon icon={faGoogle} size="2x" className='github'/></a>
-                <a href='https://www.instagram.com/julien.mlnts/' target="_blank" rel='noopener noreferrer' className='lofo'><FontAwesomeIcon icon={faInstagram} size="2x" className='github'/></a>
-            </div>
+            <Footer/>
         </>
     );
 }

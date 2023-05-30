@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faGoogle, faGithub } from '@fortawesome/free-brands-svg-icons';
-
+import {Footer} from './Widget'
 import '../App.css';
 
 const Login = () => {
@@ -83,6 +83,7 @@ const Login = () => {
           {isRegistering ? 'Already have an account? Login' : "Don't have an account? Register"}
         </button>
       </div>
+      <Footer/>
     </>
   );
 };

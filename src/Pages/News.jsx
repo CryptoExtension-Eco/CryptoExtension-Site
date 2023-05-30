@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import {Chat, Footer} from './Widget'
 import '../App.css'
 
 
@@ -15,6 +16,8 @@ const News = () => {
                   {/* <li><Link className="Link" to="/login">Login</Link></li> */}
               </ul>
          </header> 
+         <Chat/>
+         <Footer/>
     </>
   )
 }

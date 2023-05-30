@@ -1,10 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import '../App.css'
+import {Chat, Footer} from './Widget'
 
 const Download = () => {
     return(
@@ -24,13 +21,8 @@ const Download = () => {
                 <p className="paragraphe">Pour télécharger l'extension, vous avez 2 choix, sois en passant par le boutton ci-dessous, sois en allant sur le chrome store</p>
                 <a href="https://chrome.google.com/webstore/detail/cryptoextension/jbmpclggkoleafimiibabhiikdfidihf/related" target="_blank" rel="noreferrer" className="button">Télécharger</a>
             </div>
-
-            <div className="footer">
-                <p className='footer_text'>Copyright © 2023 Julien-Milants   |</p>
-                <a href='https://github.com/NapoTwiixe306' target="_blank" rel='noopener noreferrer' className='lofo'><FontAwesomeIcon icon={faGithub} size="2x" className='github'/></a>
-                <a href='https://CryptoExtension.fr' target="_blank" rel='noopener noreferrer' className='lofo'><FontAwesomeIcon icon={faGoogle} size="2x" className='github'/></a>
-                <a href='https://www.instagram.com/julien.mlnts/' target="_blank" rel='noopener noreferrer' className='lofo'><FontAwesomeIcon icon={faInstagram} size="2x" className='github'/></a>
-            </div>
+            <Chat/>
+            <Footer/>
         </>
     );
 }
