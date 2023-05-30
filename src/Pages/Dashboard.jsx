@@ -22,7 +22,7 @@ const Dashboard = () => {
 
     const loginWithMetaMask = async () => {
         const accounts = await window.ethereum
-        .request({ method: "eth_requestAccounts" })
+        .request({ method: "eth_requestAccounts" }) //utilisé le mainnet, et pas le testnet
         .catch(e => {
             console.error(e.message);
     });
