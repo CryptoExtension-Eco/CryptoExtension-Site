@@ -67,17 +67,18 @@
     }
 
     .wallet{
-      position: relative;
-      left: -35px;
-      top: -15px;
       .card-container{
-        height: 250px;
-        width: 400px;
+        height: 20s0px;
+        width: 350px;
+        position: relative;
+        top: 100px;
+        left: 35px;
       }
 
       .card-text{
         position: relative;
-        left: 50px;
+        left: 20px;
+        top: 20%;
         width: 90%;
       }
     }
@@ -86,8 +87,8 @@
       li {
         > a {
           position: relative;
-          top: 170px;
-          left: 25px;
+          top: 200px;
+          left: -5px;
           &:hover{
               background-color: $FirstColor;
           }

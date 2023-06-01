@@ -6,7 +6,7 @@ const HomePages = () => {
   return (
     <>
       <Navbar/>
-      <div id='#Home'/>
+      <div id='Home'/>
       <section className="home">
         <h1>CryptoExtension</h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro distinctio nobis perspiciatis possimus natus vel facilis deserunt, consequatur excepturi quod! Porro quos quod commodi, doloribus tempora nihil! Pariatur, dolorem quis?

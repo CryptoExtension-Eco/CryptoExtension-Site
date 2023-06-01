@@ -12,7 +12,7 @@ const NavBar = () => {
   return (
     <>
       <nav className={`header ${isMenuOpen ? 'header--open' : ''}`}>
-        <a href="#home" className="header__logo">
+        <a href="#Home" className="header__logo">
           CryptoExtension
         </a>
         <ul className={`header__navigation ${isMenuOpen ? 'header__navigation--open' : ''}`}>

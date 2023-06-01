@@ -1,7 +1,10 @@
+@import "../Base/mixins.scss";
+@import "../Base/Variables.scss";
+
 .download{
     @include Center();
     height: 100vh;
-    background-color: rgb(255, 165, 165);
+    background-color: $DownFootBgColor;
 
     h1{
         font-size: $TitleSize;

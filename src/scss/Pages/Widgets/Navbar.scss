@@ -9,7 +9,9 @@
     align-items: center;
     padding: 15px 100px;
     z-index: 10;
-    background-color: $BgColor;
+    background-color: transparent;
+    backdrop-filter: blur(5px); // Ajout de l'effet de flou
+
 
     &__logo {
         position: relative;
