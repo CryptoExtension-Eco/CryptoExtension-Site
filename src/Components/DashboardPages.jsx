@@ -2,9 +2,12 @@ import React from 'react'
 
 const DashboardPages = () => {
   return (
-    <div>
-      <h1>Dashboard</h1>
-    </div>
+    <>
+      <div id="Dashboard"/>
+      <section className='dashboard'>
+        <h1>Dashboard</h1>
+      </section>
+    </>
   )
 }
 

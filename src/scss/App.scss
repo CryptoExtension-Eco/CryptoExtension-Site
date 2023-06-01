@@ -1,57 +1,22 @@
 @import "./Base/Variables.scss";
 @import "./Base/reset.scss";
+@import "./Base/mixins.scss";
+
+
+/*Page*/
+@import "./Pages/HomesPages.scss";
+@import "./Pages/DownloadPage.scss";
+@import "./Pages/DashboardPages.scss";
+
+/*WidgetPages*/
+@import "./Pages/Widgets/Navbar.scss";
+@import "./Pages/Widgets/Footer.scss";
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     background-color: $BgColor;
     color: $TxtColor;
-}
-
-.header {
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 100px;
-    z-index: 10;
-
-    .header__logo {
-        position: relative;
-        font-size: 3.1em;
-        color: $TxtColor;
-        text-decoration: none;
-        font-weight: 600;
-        transition: 0.3s;
-
-        &:hover {
-            color: rgb(255, 164, 61);
-        }
-    }
-
-    .header__navigation {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 10px;
-
-        li {
-            list-style: none;
-            margin: 0px 25px;
-
-            .header__navigation-link {
-                color: $TxtColor;
-                text-decoration: none;
-                font-weight: 600;
-                font-size: 1.5em;
-                letter-spacing: 1px;
-                transition: 0.3s;
-
-                &:hover {
-                    color: $FirstColor;
-                }
-            }
-        }
-    }
 }
 
