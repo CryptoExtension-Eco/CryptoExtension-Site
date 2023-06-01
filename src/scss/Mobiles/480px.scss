@@ -66,6 +66,35 @@
         }
     }
 
+    .wallet{
+      position: relative;
+      left: -35px;
+      top: -15px;
+      .card-container{
+        height: 250px;
+        width: 400px;
+      }
+
+      .card-text{
+        position: relative;
+        left: 50px;
+        width: 90%;
+      }
+    }
+
+    .dashboard {
+      li {
+        > a {
+          position: relative;
+          top: 170px;
+          left: 25px;
+          &:hover{
+              background-color: $FirstColor;
+          }
+        }
+      }
+    }
+
     .footer{
         position: relative;
     }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../../scss/Pages/Widgets/Navbar.scss';
 
+
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
