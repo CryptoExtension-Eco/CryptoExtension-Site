@@ -1,4 +1,5 @@
 import { HomePages, DashboardPages, DownloadPages } from './Components';
+import { ChatBot, DownToUp } from './Components/Widget';
 import './scss/App.scss'
 
 function App() {
@@ -7,6 +8,8 @@ function App() {
       <HomePages/>
       <DashboardPages/>
       <DownloadPages/>
+      <ChatBot/>
+      <DownToUp/>
     </>
   );
 }
