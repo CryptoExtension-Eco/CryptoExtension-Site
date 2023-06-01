@@ -11,6 +11,12 @@
 /*WidgetPages*/
 @import "./Pages/Widgets/Navbar.scss";
 @import "./Pages/Widgets/Footer.scss";
+
+/*Mobile*/
+@import "./Mobiles/480px.scss";
+@import "./Mobiles/845px.scss";
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -18,5 +24,6 @@ html{
 body{
     background-color: $BgColor;
     color: $TxtColor;
+    min-width: 100%;
 }
 

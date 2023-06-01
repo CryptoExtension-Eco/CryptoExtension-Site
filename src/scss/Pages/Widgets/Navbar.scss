@@ -1,14 +1,11 @@
 @import "../../Base/Variables.scss";
 .header {
-    top: 0;
-    left: 0;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 100px;
     z-index: 10;
-    background-color: red;
+
 
     .header__logo {
         position: relative;
