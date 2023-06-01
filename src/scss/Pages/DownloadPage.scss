@@ -1,0 +1,9 @@
+.download{
+    @include Center();
+    height: 100vh;
+    background-color: rgb(255, 165, 165);
+
+    h1{
+        font-size: $TitleSize;
+    }
+}

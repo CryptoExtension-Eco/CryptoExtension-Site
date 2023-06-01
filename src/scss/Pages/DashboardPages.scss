@@ -1,0 +1,11 @@
+@import "../Base/mixins.scss";
+
+.dashboard{
+    @include Center();
+    height: 100vh;
+    background-color: darkgoldenrod;
+
+    h1{
+        font-size: $TitleSize;
+    }
+}

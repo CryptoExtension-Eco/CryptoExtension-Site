@@ -4,9 +4,10 @@ import { Footer } from './Widget'
 const DownloadPages = () => {
   return (
     <>
-      <div>
-        <h1>Downloads</h1>
-      </div>
+      <div id='Download'/>
+      <section className="download">
+        <h1>Download</h1>
+      </section>
       <Footer/>
     </>
   )
