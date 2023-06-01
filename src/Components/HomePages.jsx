@@ -5,7 +5,7 @@ import { Navbar} from './Widget'
 const HomePages = () => {
   return (
     <>
-      {/* <Navbar/> */}
+      <Navbar/>
       <div id='#Home'/>
       <section className="home">
         <h1>CryptoExtension</h1>

@@ -1,13 +1,15 @@
 @import "../../Base/Variables.scss";
+@import "../../Base/mixins.scss";
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 100px;
     z-index: 10;
+    background-color: $BgColor;
 
-
-    .header__logo {
+    &__logo {
         position: relative;
         font-size: 3.1em;
         color: $TxtColor;
@@ -16,21 +18,22 @@
         transition: 0.3s;
 
         &:hover {
-            color: rgb(255, 164, 61);
+        color: $FirstColor;
         }
     }
 
-    .header__navigation {
+    &__navigation {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         margin: 10px;
 
         li {
-            list-style: none;
-            margin: 0px 25px;
+        list-style: none;
+        margin: 0px 25px;
 
-            .header__navigation-link {
+            & .header__navigation-link {
+                @include Center();
                 color: $TxtColor;
                 text-decoration: none;
                 font-weight: 600;
@@ -39,10 +42,12 @@
                 transition: 0.3s;
 
                 &:hover {
-                    color: $FirstColor;
+                color: $FirstColor;
                 }
             }
         }
     }
+    &__burger {
+        display: none;
+      }
 }
-
