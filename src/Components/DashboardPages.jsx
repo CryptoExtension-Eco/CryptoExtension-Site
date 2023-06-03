@@ -3,6 +3,8 @@ const chip = require("../images/chip.png");
 const visa = require("../images/visa.png");
 const contactless = require("../images/wifi-signal.png")
 
+// switch le js dans DashboardPageBack.js
+
 const DashboardPages = () => {
   const [userWalletAddress, setUserWalletAddress] = useState(null);
   const [loginButtonText, setLoginButtonText] = useState("Connect to your wallet")
