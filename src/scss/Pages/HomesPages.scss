@@ -1,4 +1,5 @@
 @import "../Base/mixins.scss";
+@import "../Base/Variables.scss";
 .home{
     @include Center();
     flex-direction: column;
@@ -20,17 +21,6 @@
     a{
         position: relative;
         top: 55px;
-        color: $TxtColor;
-        background-color: #ffb94f;
-        line-height: 1;
-        border-radius: 19px;
-        font-size: 35px;
-        padding: 15px 30px;
-        transition: all .2s ease-in-out;
-        &:hover{
-            
-            border-radius: 25px;
-            background-color: $FirstColor;
-        }
+        @include Button();
     }
 }

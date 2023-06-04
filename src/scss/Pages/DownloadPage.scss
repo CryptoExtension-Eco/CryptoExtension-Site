@@ -3,10 +3,14 @@
 
 .download{
     @include Center();
+    flex-direction: column;
     height: 100vh;
     background-color: $DownFootBgColor;
 
     h1{
         font-size: $TitleSize;
+    }
+    a{
+        @include Button();
     }
 }

@@ -1,126 +1,126 @@
 @import "../Base/mixins.scss";
 
 @media only screen and (max-width: 480px) {
-    .header{
-        padding: 15px 20px;
-        &__logo{
-            font-size: 35px;
-          }
-      
-          &__navigation {
-            display: none;
-          }
-      
-          &__burger {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 30px;
-            height: 20px;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-        
-            &--open {
-              .header__burger-line {
-                &:nth-child(1) {
-                  transform: rotate(45deg) translate(3px, 5px);
-                }
-                &:nth-child(2) {
-                  opacity: 0;
-                }
-                &:nth-child(3) {
-                  transform: rotate(-45deg) translate(3px, -5px);
-                }
-              }
-            }
-        
-            .header__burger-line {
-              display: block;
-              width: 100%;
-              height: 2px;
-              background-color: #000;
-              margin-bottom: 4px;
-              transition: all 0.3s ease-in-out;
-        
-              &:last-child {
-                margin-bottom: 0;
-              }
-            }
-          }
-      
-          &__navigation--open {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: $BgColor;
-            position: absolute;
-            top: 60px;
-            margin-left: -25px;
-            width: 110%;
-            height: 350px;
-            padding: 20px;
-      
-            li {
-              margin: 10px 0;
-      
-              & .header__navigation-link {
-                font-size: 1.8em;
-              }
-            }
+  .header{
+      padding: 15px 20px;
+      &__logo{
+          font-size: 35px;
         }
-    }
     
-    .home, .download, .dashboard{
-        min-width: 100%;
-        h1{
-            font-size: 45px;
+        &__navigation {
+          display: none;
         }
-        p{
-            @include Center();
-            text-align: center;
+    
+        &__burger {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 30px;
+          height: 20px;
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+      
+          &--open {
+            .header__burger-line {
+              &:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+              }
+              &:nth-child(2) {
+                opacity: 0;
+              }
+              &:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+              }
+            }
+          }
+      
+          .header__burger-line {
+            display: block;
             width: 100%;
-            font-size: 15px;
-        }
-    }
-
-    .wallet{
-      .card-container{
-        height: 200px;
-        width: 350px;
-        position: relative;
-        top: 100px;
-        left: 18px;
-      }
-
-      .card-text{
-        position: relative;
-        left: 20px;
-        top: 20%;
-        width: 90%;
-      }
-    }
-
-    .dashboard {
-      li {
-        > a {
-          position: relative;
-          top: 200px;
-          margin-left: -5px;
-          &:hover{
-              background-color: $FirstColor;
+            height: 2px;
+            background-color: #ffffff;
+            margin-bottom: 7px;
+            transition: all 0.3s ease-in-out;
+      
+            &:last-child {
+              margin-bottom: 0;
+            }
           }
         }
+    
+        &__navigation--open {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: $BgColor;
+          position: absolute;
+          top: 60px;
+          margin-left: -25px;
+          width: 110%;
+          height: 350px;
+          padding: 20px;
+    
+          li {
+            margin: 10px 0;
+    
+            & .header__navigation-link {
+              font-size: 1.8em;
+            }
+          }
+      }
+  }
+      
+  .home, .download, .dashboard{
+      min-width: 100%;
+      h1{
+          font-size: 45px;
+      }
+      p{
+          @include Center();
+          text-align: center;
+          width: 90%;
+          font-size: 15px;
+      }
+  }
+
+  .wallet{
+    .card-container{
+      height: 200px;
+      width: 350px;
+      position: relative;
+      top: 100px;
+      left: 18px;
+    }
+
+    .card-text{
+      position: relative;
+      left: 20px;
+      top: 20%;
+      width: 90%;
+    }
+  }
+
+  .dashboard {
+    li {
+      > a {
+        position: relative;
+        top: 200px;
+        left: -10px;
+        &:hover{
+            background-color: $FirstColor;
+        }
       }
     }
+  }
 
+  .downtoup{
+    display: none;
+  }
 
-
-    .downtoup{display: none;}
-
-    .footer{
-        position: relative;
-    }
+  .footer{
+      position: relative;
+  }
 
 }

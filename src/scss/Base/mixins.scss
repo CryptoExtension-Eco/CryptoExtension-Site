@@ -3,3 +3,18 @@
     align-items: center;
     justify-content: center;
 }
+
+@mixin Button{
+    color: $TxtColor;
+    background-color: #ffb94f;
+    line-height: 1;
+    border-radius: 19px;
+    font-size: 35px;
+    padding: 15px 30px;
+    transition: all .2s ease-in-out;
+    &:hover{
+        
+        border-radius: 25px;
+        background-color: $FirstColor;
+    }
+}
