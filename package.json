@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "solc": "^0.8.20",
     "truffle": "^5.9.3"
   }
 }
