@@ -49,10 +49,10 @@ const DashboardPages = () => {
 
   return (
     <>
-      <div id="Dashboard"/>
-      <section className='dashboard'>
+      <div id="Dashboard" />
+      <section className="dashboard wallet">
         <div className="contenu">
-          <div className="wallet" id="Wallet">
+          <div className="" id="Wallet">
             <p id="userWallet" className="text-lg text-gray-600 my-2 ethAdresse"></p>
             <div className="card-container">
               <div className="card1">
@@ -70,11 +70,15 @@ const DashboardPages = () => {
               <li><a href="#a" id="loginButton">{loginButtonText}</a></li>
             </ul>
           </div>
+
+          <article className="add-wallet">
+            <h2>Ajouter un wallet</h2>
+            {/* Ajoutez ici le contenu pour ajouter un wallet */}
+          </article>
         </div>
       </section>
-
     </>
-  )
-}
-
+  );
+}  
+  
 export default DashboardPages
