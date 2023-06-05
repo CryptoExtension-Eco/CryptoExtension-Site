@@ -60,6 +60,16 @@
         position: relative;
         padding-top: 60%;
         overflow: hidden;
+
+        #accountBalance{
+          position: absolute;
+          top: 73%;
+          left: 5%;
+          font-size: 25px;
+          color: white;
+          text-transform: uppercase;
+          text-shadow: 0 3px black;
+        }
         
         .chip {
           position: absolute;
@@ -100,7 +110,7 @@
           color: white;
           text-transform: uppercase;
           text-shadow: 0 3px black;
-          top: 74%;
+          top: 88%;
           font-size: 1.3rem;
         }
         
