@@ -42,7 +42,6 @@ const DashboardPages = () => {
               <li><a href="#a" id="loginButton" onClick={userWalletAddress ? handleLogout : null}>{loginButtonText}</a></li>
             </ul>
           </div>
-
           <article className="add-wallet">
             <h2>Ajouter un wallet</h2>
             {/* Ajoutez ici le contenu pour ajouter un wallet */}

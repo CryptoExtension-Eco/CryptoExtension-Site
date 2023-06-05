@@ -22,8 +22,6 @@ const LoginMetaMask = ({ setUserWalletAddress, setLoginButtonText, setAccountBal
         setTimeout(() => {
           document.getElementById("loginButton").addEventListener("click", signOutOfMetaMask);
         });
-
-
         const web3 = new Web3(window.ethereum);
         const balance = await getAccountBalance(web3, accounts[0]);
         setAccountBalance(balance);
