@@ -1,6 +1,6 @@
 import { useEffect} from 'react';
 import Web3 from 'web3';
-
+// eslint-disable-next-line
 const LoginMetaMask = ({ setUserWalletAddress, setLoginButtonText, setAccountBalance }) => {
   useEffect(() => {
     toggleButton();
@@ -23,7 +23,7 @@ const LoginMetaMask = ({ setUserWalletAddress, setLoginButtonText, setAccountBal
           document.getElementById("loginButton").addEventListener("click", signOutOfMetaMask);
         });
 
-        // Get account balance
+
         const web3 = new Web3(window.ethereum);
         const balance = await getAccountBalance(web3, accounts[0]);
         setAccountBalance(balance);
