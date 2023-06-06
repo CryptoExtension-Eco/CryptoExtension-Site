@@ -54,5 +54,4 @@ const LoginMetaMask = ({ setUserWalletAddress, setLoginButtonText, setAccountBal
 
   return null;
 };
-
 export default LoginMetaMask;
