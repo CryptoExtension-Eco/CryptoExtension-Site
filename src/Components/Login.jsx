@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import '../Components/Widget/NavBar';
 import '../Components/Widget/Footer';
 import '../scss/Pages/Login.scss';
@@ -13,23 +14,35 @@ const Login = () => {
   const [loginData, setLoginData] = useState({ email: '', password: '' });
   const [registerData, setRegisterData] = useState({ name: '', email: '', password: '' });
 
-  const handleLoginSubmit = e => {
+  const handleLoginSubmit = async (e) => {
     e.preventDefault();
-    console.log(loginData);
-    alert(`Email: ${loginData.email}\nPassword: ${loginData.password}`);
+    try {
+      const response = await axios.post('http://localhost:4500/auth/login', loginData);
+      console.log(response.data);
+      // Do something with the response data
+    } catch (error) {
+      console.error(error);
+      // Handle the error
+    }
   };
 
-  const handleRegisterSubmit = e => {
+  const handleRegisterSubmit = async (e) => {
     e.preventDefault();
-    console.log(registerData);
-    alert(`Name: ${registerData.name}\nEmail: ${registerData.email}\nPassword: ${registerData.password}`);
+    try {
+      const response = await axios.post('http://localhost:4500/auth/register', registerData);
+      console.log(response.data);
+      // Do something with the response data
+    } catch (error) {
+      console.error(error);
+      // Handle the error
+    }
   };
 
-  const handleLoginInputChange = e => {
+  const handleLoginInputChange = (e) => {
     setLoginData({ ...loginData, [e.target.name]: e.target.value });
   };
 
-  const handleRegisterInputChange = e => {
+  const handleRegisterInputChange = (e) => {
     setRegisterData({ ...registerData, [e.target.name]: e.target.value });
   };
 
