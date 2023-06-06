@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../../scss/Pages/Widgets/Navbar.scss';
 
 
@@ -30,6 +31,9 @@ const NavBar = () => {
           <a href="#Download" rel="noopener noreferrer" className="header__navigation-link">
             Download
           </a>
+        </li>
+        <li className="header__navigation-item">
+          <Link to="login" className="header__navigation-link">Login</Link>
         </li>
       </ul>
       <button className={`header__burger ${isMenuOpen ? 'header__burger--open' : ''}`} onClick={handleMenuToggle}>
