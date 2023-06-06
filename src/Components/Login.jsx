@@ -6,11 +6,10 @@ import '../Components/Widget/Footer';
 import '../scss/Pages/Login.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faGoogle, faGithub } from '@fortawesome/free-brands-svg-icons';
-
 import NavBar from '../Components/Widget/NavBar';
 
 const Login = () => {
-  const [isRegistering, setIsRegistering] = useState(false);
+  const [isRegistering, setIsRegistering] = useState(true);
   const [loginData, setLoginData] = useState({ email: '', password: '' });
   const [registerData, setRegisterData] = useState({ name: '', email: '', password: '' });
 
@@ -18,11 +17,13 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:4500/auth/login', loginData);
+      console.log('Login Successful!');
+      console.log('Email:', loginData.email);
+      console.log('Password:', loginData.password);
       console.log(response.data);
-      console.log("gg")
     } catch (error) {
+      console.error('Login Failed!');
       console.error(error);
-      console.log("pas gg")
     }
   };
 
@@ -30,12 +31,14 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:4500/auth/register', registerData);
+      console.log('Registration Successful!');
+      console.log('Name:', registerData.name);
+      console.log('Email:', registerData.email);
+      console.log('Password:', registerData.password);
       console.log(response.data);
-      console.log("gg1")
     } catch (error) {
+      console.error('Registration Failed!');
       console.error(error);
-      console.log("pas gg1")
-
     }
   };
 
@@ -54,9 +57,11 @@ const Login = () => {
   const handleFacebookButton = () => {
     alert('FaceBook');
   };
+
   const handleGoogleButton = () => {
     alert('Google');
   };
+
   const handleGithubButton = () => {
     alert('GitHub');
   };
@@ -115,7 +120,9 @@ const Login = () => {
           <button onClick={handleToggleRegister} className="btn-form">
             {isRegistering ? 'Already have an account? Login' : "Don't have an account? Register"}
           </button>
-          <Link to="/" className='HomeLink'>Back To Home</Link>
+          <Link to="/" className="HomeLink">
+            Back To Home
+          </Link>
         </div>
       </div>
     </>
