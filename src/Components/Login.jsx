@@ -19,10 +19,10 @@ const Login = () => {
     try {
       const response = await axios.post('http://localhost:4500/auth/login', loginData);
       console.log(response.data);
-      // Do something with the response data
+      console.log("gg")
     } catch (error) {
       console.error(error);
-      // Handle the error
+      console.log("pas gg")
     }
   };
 
@@ -31,10 +31,11 @@ const Login = () => {
     try {
       const response = await axios.post('http://localhost:4500/auth/register', registerData);
       console.log(response.data);
-      // Do something with the response data
+      console.log("gg1")
     } catch (error) {
       console.error(error);
-      // Handle the error
+      console.log("pas gg1")
+
     }
   };
 

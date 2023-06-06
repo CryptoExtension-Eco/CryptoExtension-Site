@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const authRoutes = require('./Models/User');
-require('dotenv').config();
+require ('dotenv').config()
+
 
 // Création de l'application Express
 const app = express();
@@ -28,40 +29,21 @@ app.use((req, res, next) => {
 app.use((error, req, res, next) => {
   res.status(error.status || 500).json({
     error: {
-      message: error.message,
-    },
+      message: error.message
+    }
   });
   next();
 });
 
 // Connexion à la base de données MongoDB
-mongoose
-  .connect(process.env.MONGO_URI, {
+mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(async () => {
+    useUnifiedTopology: true
+  }).then(() => {
     console.log('Connected to MongoDB');
-
-    // Créer l'utilisateur Admin s'il n'existe pas déjà
-    const User = require('./Models/User');
-
-    const adminUser = await User.findOne({ username: 'Admin' });
-    if (!adminUser) {
-      const newAdminUser = new User({
-        name: 'Admin',
-        password: 'Admin',
-        email: 'Admin.admin@gmail.com'
-      });
-
-      await newAdminUser.save();
-      console.log('Utilisateur Admin créé avec succès');
-    }
-  })
-  .catch((error) => {
-    console.error('Erreur de la base de données', error);
+  }).catch((error) => {
+    console.error("erreur de la bdd", error);
   });
-
 // Démarrage du serveur
 const PORT = process.env.PORT || 4500;
 app.listen(PORT, () => {
