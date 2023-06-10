@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import '../../scss/Pages/Widgets/Navbar.scss';
 
 const NavBar = () => {
@@ -24,17 +26,30 @@ const NavBar = () => {
           <li className="header__navigation-item">
             <div className="header__dropdown">
               <a href="#a" rel="noopener noreferrer" className="header__navigation-link">
-                Ecosystem
+               Ecosystem <FontAwesomeIcon icon={faChevronDown}/>
               </a>
               <div className="header__dropdown-content">
-                <a href="#Dashboard" rel="noopener noreferrer" className="header__dropdown-link">
-                  Dashboard
+                <a href="#ad" rel="noopener noreferrer" className="header__dropdown-link">
+                  Application
                 </a>
-                <a href="#Download" rel="noopener noreferrer" className="header__dropdown-link">
-                  Download
+                <a href="#a" rel="noopener noreferrer" className="header__dropdown-link">
+                  Blockchain
+                </a>
+                <a href="#a" rel="noopener noreferrer" className="header__dropdown-link">
+                  CryptoCurrency
                 </a>
               </div>
             </div>
+          </li>
+          <li className="header__navigation-item">
+            <a href="#Dashboard" rel="noopener noreferrer" className="header__navigation-link">
+              Dashboard
+            </a>
+          </li>
+          <li className="header__navigation-item">
+            <a href="#Download" rel="noopener noreferrer" className="header__navigation-link">
+              Download
+            </a>
           </li>
           <li className="header__navigation-item">
             <Link to="login" className="header__navigation-link">
