@@ -70,6 +70,10 @@
             }
           }
       }
+
+      &__dropdown {
+        display: none;
+      }
   }
       
   .home, .download, .dashboard{
