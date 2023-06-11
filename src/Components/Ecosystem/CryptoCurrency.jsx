@@ -2,9 +2,11 @@ import React from 'react'
 
 const CryptoCurrency = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <div className="crypto">
+          <h1>API</h1>
+      </div>
+    </>
   )
 }
 
