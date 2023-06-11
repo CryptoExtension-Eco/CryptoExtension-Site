@@ -23,7 +23,7 @@ const NavBar = () => {
               Home
             </a>
           </li>
-          <li className="header__navigation-item">
+          {/* <li className="header__navigation-item">
             <div className="header__dropdown">
               <a href="#a" rel="noopener noreferrer" className="header__navigation-link">
                Ecosystem <FontAwesomeIcon icon={faChevronDown}/>
@@ -40,7 +40,7 @@ const NavBar = () => {
                 </a>
               </div>
             </div>
-          </li>
+          </li> */}
           <li className="header__navigation-item">
             <a href="#Dashboard" rel="noopener noreferrer" className="header__navigation-link">
               Dashboard
