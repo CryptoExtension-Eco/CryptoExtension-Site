@@ -92,7 +92,7 @@ const Login = () => {
               </div>
             )}
             <div className="form-group">
-              <label htmlFor="email">Email:</label>
+              <label htmlFor="email" id=''>Email:</label>
               <input
                 type="email"
                 name="email"

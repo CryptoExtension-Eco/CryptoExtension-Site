@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import '../../scss/Pages/Widgets/Navbar.scss';
@@ -22,6 +22,7 @@ const NavBar = () => {
             <a href="#Home" rel="noopener noreferrer" className="header__navigation-link">
               Home
             </a>
+            
           </li>
           {/* <li className="header__navigation-item">
             <div className="header__dropdown">
@@ -29,15 +30,11 @@ const NavBar = () => {
                Ecosystem <FontAwesomeIcon icon={faChevronDown}/>
               </a>
               <div className="header__dropdown-content">
-                <a href="#ad" rel="noopener noreferrer" className="header__dropdown-link">
-                  Application
-                </a>
-                <a href="#a" rel="noopener noreferrer" className="header__dropdown-link">
-                  Blockchain
-                </a>
-                <a href="#a" rel="noopener noreferrer" className="header__dropdown-link">
-                  CryptoCurrency
-                </a>
+               <Link className='header__dropdown-link' to='api'>Api</Link>
+               <Link className='header__dropdown-link' to='mobileapp'>Mobile App</Link>
+               <Link className='header__dropdown-link' to='blockchain'>Blockchain</Link>
+               <Link className='header__dropdown-link' to='crypto'>CryptoCurrency</Link>
+               
               </div>
             </div>
           </li> */}
@@ -51,11 +48,11 @@ const NavBar = () => {
               Download
             </a>
           </li>
-          <li className="header__navigation-item">
+          {/* <li className="header__navigation-item">
             <Link to="login" className="header__navigation-link">
               Login
             </Link>
-          </li>
+          </li> */}
         </ul>
         <button className={`header__burger ${isMenuOpen ? 'header__burger--open' : ''}`} onClick={handleMenuToggle}>
           <span className="header__burger-line"></span>

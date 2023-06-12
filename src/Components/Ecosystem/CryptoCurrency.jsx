@@ -4,7 +4,7 @@ const CryptoCurrency = () => {
   return (
     <>
       <div className="crypto">
-          <h1>API</h1>
+          <h1>Crypto</h1>
       </div>
     </>
   )

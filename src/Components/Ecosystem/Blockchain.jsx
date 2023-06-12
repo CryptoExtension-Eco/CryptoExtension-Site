@@ -4,7 +4,7 @@ const Blockchain = () => {
   return (
     <>
         <div className="blockchain">
-            <h1>API</h1>
+            <h1>Blockchain</h1>
         </div>
     </>
   )
