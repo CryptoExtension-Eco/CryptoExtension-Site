@@ -7,7 +7,7 @@ const Footer = () => {
   return (
       <>
         <footer className="footer">
-            <p className="footer__text">Copyright © 2023 Julien-Milants   |</p>
+            <p className="footer__text">Copyright © 2023 Julien.Milants   |</p>
             <a href="https://github.com/NapoTwiixe306" target="_blank" rel="noopener noreferrer" className="footer__link footer__link--github">
                 <FontAwesomeIcon icon={faGithub} size="2x" className="footer__icon footer__icon--github" />
             </a>
